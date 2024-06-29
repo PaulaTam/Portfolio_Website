@@ -45,18 +45,21 @@ export const IconBadges = () => {
 };
 
 const ContactIcons = [
-  { name: "Email", icon: <MdEmail className="contact-icon" /> },
-  { name: "LinkedIn", icon: <FaLinkedin className="contact-icon" /> },
-  { name: "Github", icon: <FaGithub className="contact-icon" /> },
+  { name: "Email", icon: <MdEmail className="contact-icon" />,
+    link: <a href="mailto:abigailttam65@gmail.com?subject=Contacting%20from%20your%20portfolio!%20" target="_blank" rel="noopener noreferrer">Email me!</a> },
+  { name: "LinkedIn", icon: <FaLinkedin className="contact-icon" />,
+    link: <a href="https://www.linkedin.com/in/paulatam/" target="_blank" rel="noopener noreferrer">LinkedIn</a>},
+  { name: "Github", icon: <FaGithub className="contact-icon" />,
+    link: <a href="https://github.com/PaulaTam" target="_blank" rel="noopener noreferrer">Github</a>},
 ]
 
 export const ContactBadges = () => {
   return (
     <ul className="pl-4">
       {ContactIcons.map(item => (
-        <li key={item.name} className="hover flex flex-row gap-3 p-2">
+        <li key={item.name} className="hover flex flex-row items-center gap-3 p-2">
           {item.icon}
-          <p>{item.name}</p>
+          {item.link}
         </li>
       ))}
     </ul>
