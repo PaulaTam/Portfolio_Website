@@ -19,4 +19,8 @@ html {
   .icon-center {
     @apply h-16 w-16 m-auto;
   }
+
+  .contact-icon {
+    @apply h-8 w-8;
+  }
 }

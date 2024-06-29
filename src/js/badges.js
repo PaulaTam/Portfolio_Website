@@ -1,10 +1,17 @@
 import React from 'react';
 //icon imports
+//skills
 import { FaReact } from "react-icons/fa";
 import { IoLogoJavascript } from "react-icons/io5";
 import { FaHtml5 } from "react-icons/fa";
 import { FaCss3Alt } from "react-icons/fa";
 import { FaPython } from "react-icons/fa";
+import { RiTailwindCssFill } from "react-icons/ri";
+//contact
+import { FaLinkedin } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
+//misc
 import { FaArrowUp } from "react-icons/fa";
 
 export const TextBadges = (props) => {
@@ -21,6 +28,7 @@ const SkillIcons = [
   { name: "HTML5", icon: <FaHtml5 className="icon-center" /> },
   { name: "CSS3", icon: <FaCss3Alt className="icon-center" /> },
   { name: "Python", icon: <FaPython className="icon-center" /> },
+  { name: "Tailwind CSS", icon: <RiTailwindCssFill className="icon-center" /> },
 ];
 
 export const IconBadges = () => {
@@ -36,10 +44,22 @@ export const IconBadges = () => {
   );
 };
 
+const ContactIcons = [
+  { name: "Email", icon: <MdEmail className="contact-icon" /> },
+  { name: "LinkedIn", icon: <FaLinkedin className="contact-icon" /> },
+  { name: "Github", icon: <FaGithub className="contact-icon" /> },
+]
+
 export const ContactBadges = () => {
   return (
-    <>
-    </>
+    <ul className="pl-4">
+      {ContactIcons.map(item => (
+        <li key={item.name} className="hover flex flex-row gap-3 p-2">
+          {item.icon}
+          <p>{item.name}</p>
+        </li>
+      ))}
+    </ul>
   );
 };
 

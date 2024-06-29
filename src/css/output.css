@@ -439,6 +439,15 @@ video {
   flex-direction: column;
   justify-content: center;
 }
+.icon-center {
+  margin: auto;
+  height: 4rem;
+  width: 4rem;
+}
+.contact-icon {
+  height: 2rem;
+  width: 2rem;
+}
 .fixed {
   position: fixed;
 }
@@ -466,9 +475,6 @@ video {
 .h-10 {
   height: 2.5rem;
 }
-.h-16 {
-  height: 4rem;
-}
 .h-4 {
   height: 1rem;
 }
@@ -489,9 +495,6 @@ video {
 }
 .w-10 {
   width: 2.5rem;
-}
-.w-16 {
-  width: 4rem;
 }
 .w-40 {
   width: 10rem;
