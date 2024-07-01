@@ -5,8 +5,9 @@ import { FaReact } from "react-icons/fa";
 import { IoLogoJavascript } from "react-icons/io5";
 import { FaHtml5 } from "react-icons/fa";
 import { FaCss3Alt } from "react-icons/fa";
-import { FaPython } from "react-icons/fa";
+import PythonIcon from "../assets/python-logo-only.png";
 import { RiTailwindCssFill } from "react-icons/ri";
+import FigmaIcon from "../assets/Figma-Icon.svg";
 //contact
 import { FaLinkedin } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
@@ -23,12 +24,13 @@ export const TextBadges = (props) => {
 };
 
 const SkillIcons = [
-  { name: "React", icon: <FaReact className="icon-center" /> },
-  { name: "JavaScript", icon: <IoLogoJavascript className="icon-center" /> },
-  { name: "HTML5", icon: <FaHtml5 className="icon-center" /> },
-  { name: "CSS3", icon: <FaCss3Alt className="icon-center" /> },
-  { name: "Python", icon: <FaPython className="icon-center" /> },
-  { name: "Tailwind CSS", icon: <RiTailwindCssFill className="icon-center" /> },
+  { name: "React", icon: <FaReact className="icon-center text-cyan-300" /> },
+  { name: "JavaScript", icon: <IoLogoJavascript className="icon-center text-yellow-400" /> },
+  { name: "HTML5", icon: <FaHtml5 className="icon-center text-orange-600" /> },
+  { name: "CSS3", icon: <FaCss3Alt className="icon-center text-blue-500" /> },
+  { name: "Python", icon: <img src={PythonIcon} alt="Python icon" className="icon-center" /> },
+  { name: "Tailwind CSS", icon: <RiTailwindCssFill className="icon-center text-sky-400" /> },
+  { name: "Figma", icon: <img src={FigmaIcon} alt="Figma icon" className="icon-center" /> }
 ];
 
 export const IconBadges = () => {

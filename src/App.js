@@ -3,6 +3,7 @@ import './css/styles.css';
 import './css/output.css';
 import Nav from './js/nav.js';
 import { ContactBadges, IconBadges, ToTop } from './js/badges.js';
+import RenderProjects from './js/projects';
 
 function App() {
   return (
@@ -34,8 +35,10 @@ function App() {
         <div id="experience" className="bg-red-500 h-96 scroll-mt-12">
           <div className="center-items text-left">experience</div>
           </div> {/*change height to fit-content later on*/}
-        <div id="projects" className="bg-green-500 h-96 scroll-mt-12">projects</div>
-        <div id="contact" className="bg-yellow-500 h-48 scroll-mt-12 p-4">
+        <div id="projects" className="bg-green-500 scroll-mt-12">
+          <RenderProjects />
+        </div>
+        <div id="contact" className="bg-yellow-500 scroll-mt-12 p-4">
           <p className="font-semibold text-xl">Contact</p>
           <ContactBadges />
         </div>
