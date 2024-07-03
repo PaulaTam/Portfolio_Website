@@ -2,7 +2,7 @@ import React from 'react';
 
 const Nav = () => {
   return (
-    <nav className="bg-black text-white flex flex-row gap-4 justify-end sticky top-0 p-3">
+    <nav className="text-custom-light flex flex-row gap-4 justify-end sticky top-0 p-3">
       <a href="#about">About</a>
       <a href="#experience">Experience</a>
       <a href="#projects">Projects</a>

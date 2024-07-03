@@ -7,6 +7,12 @@ html {
   scroll-behavior: smooth;
 }
 
+@layer base {
+  body {
+    @apply bg-custom-main text-custom-light;
+  }
+}
+
 @layer components {
   .hover {
     @apply hover:-translate-y-1 duration-75;

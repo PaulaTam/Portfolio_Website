@@ -161,15 +161,12 @@ module.exports = {
       fuchsia: colors.fuchsia,
       pink: colors.pink,
       rose: colors.rose,
-      'custom-teal': {
-        base: '#0E8992',
-        light: '#40A3C2',
-        dark: '#002C41'
-      },
-      'custom-apricot': '#F9E6DC',
-      'custom-cream': '#F6EFDE',
-      'custom-burnt-orange': '#E36527',
-      'custom-yellow': '#FFD33A'
+      'custom': {
+        main: '#233043',
+        accent: '#82C5C5',
+        light: '#FAFAFA',
+        dark: '#073B52'
+      }
     }),
     columns: {
       auto: 'auto',

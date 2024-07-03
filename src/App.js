@@ -10,7 +10,7 @@ function App() {
     <>
       <Nav />
       <main>
-        <div id="hero" className="bg-blue-500 h-dvh scroll-mt-12 flex justify-center">
+        <div id="hero" className="h-dvh scroll-mt-12 flex justify-center">
           <div className="flex flex-row justify-center items-center gap-2 m-auto">
             <div className="center-items">
               <p className="font-bold text-3xl">Paula Abigail T. Tam</p>
@@ -23,22 +23,22 @@ function App() {
             </div>
           </div>
         </div>
-        <div id="about" className="bg-slate-500 h-96 flex flex-col justify-between scroll-mt-12">
+        <div id="about" className="h-96 flex flex-col justify-between scroll-mt-12">
           <div className="flex-1 center-items m-auto">
             <p className="font-semibold text-xl">About Me!</p>
             <p>I graduated in May 2023 with a Bachlor's in Computer Science and a Minor in Mathematics.</p>
           </div>
-          <div id="skills" className="bg-slate-300 flex-1 center-items m-auto">
+          <div id="skills" className="flex-1 center-items m-auto">
             <IconBadges />
           </div>
         </div>
-        <div id="experience" className="bg-red-500 h-96 scroll-mt-12">
+        <div id="experience" className="h-96 scroll-mt-12">
           <div className="center-items text-left">experience</div>
           </div> {/*change height to fit-content later on*/}
-        <div id="projects" className="bg-green-500 scroll-mt-12">
+        <div id="projects" className="scroll-mt-12">
           <RenderProjects />
         </div>
-        <div id="contact" className="bg-yellow-500 scroll-mt-12 p-4">
+        <div id="contact" className="scroll-mt-12 p-4">
           <p className="font-semibold text-xl">Contact</p>
           <ContactBadges />
         </div>

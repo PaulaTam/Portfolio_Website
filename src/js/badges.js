@@ -17,10 +17,10 @@ import { FaArrowUp } from "react-icons/fa";
 
 export const TextBadges = (props) => {
   return (
-    <div className="rounded-xl border w-8 h-4 p-2">
-      {props.name}
+    <div key={props.item} className="bg-custom-accent text-custom-dark rounded-xl border border-custom-dark w-fit h-6 px-2">
+      {props.item}
     </div>
-  );
+  )
 };
 
 const SkillIcons = [
@@ -48,7 +48,7 @@ export const IconBadges = () => {
 
 const ContactIcons = [
   { name: "Email", icon: <MdEmail className="contact-icon" />,
-    link: <a href="mailto:abigailttam65@gmail.com?subject=Contacting%20from%20your%20portfolio!%20" target="_blank" rel="noopener noreferrer">Email me!</a> },
+    link: <a href="mailto:abigailttam65@gmail.com?subject=Contacting%20from%20your%20portfolio!%20" target="_blank" rel="noopener noreferrer">abigailttam65@gmail.com</a> },
   { name: "LinkedIn", icon: <FaLinkedin className="contact-icon" />,
     link: <a href="https://www.linkedin.com/in/paulatam/" target="_blank" rel="noopener noreferrer">LinkedIn</a>},
   { name: "Github", icon: <FaGithub className="contact-icon" />,
