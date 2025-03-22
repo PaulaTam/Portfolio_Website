@@ -4,6 +4,7 @@ import './css/output.css';
 import Nav from './js/nav.js';
 import { ContactBadges, IconBadges, ToTop } from './js/badges.js';
 import RenderProjects from './js/projects';
+import ProfilePhoto from './assets/photo_PaulaAbigail_Tam.JPG';
 
 function App() {
   return (
@@ -19,14 +20,15 @@ function App() {
               <p>I'm passionate about creating creative, engaging, and intuitive web experiences.</p>
             </div>
             <div className="h-40 w-40 border">
-              <p>img here</p>
+              <img src={ProfilePhoto} alt='img here' />
             </div>
           </div>
         </div>
         <div id="about" className="h-96 flex flex-col justify-between scroll-mt-12">
           <div className="flex-1 center-items m-auto">
             <p className="font-semibold text-xl">About Me!</p>
-            <p>I graduated in May 2023 with a Bachlor's in Computer Science and a Minor in Mathematics.</p>
+            <p>I graduated in May 2023 with a BS in Computer Science and a Minor in Mathematics.</p>
+            <p>I am currently working part-time as a Data Analytics Instructor at COOP Careers.</p>
           </div>
           <div id="skills" className="flex-1 center-items m-auto">
             <IconBadges />
@@ -34,8 +36,8 @@ function App() {
         </div>
         <div id="experience" className="h-96 scroll-mt-12">
           <div className="center-items text-left">experience</div>
-          </div> {/*change height to fit-content later on*/}
-        <div id="projects" className="scroll-mt-12">
+        </div> {/*change height to fit-content later on*/}
+        <div id="projects" className="flex-1 center-items gap-6 m-auto scroll-mt-12">
           <RenderProjects />
         </div>
         <div id="contact" className="scroll-mt-12 p-4">

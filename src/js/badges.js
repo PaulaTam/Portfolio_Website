@@ -17,7 +17,7 @@ import { FaArrowUp } from "react-icons/fa";
 
 export const TextBadges = (props) => {
   return (
-    <div key={props.item} className="bg-custom-accent text-custom-dark rounded-xl border border-custom-dark w-fit h-6 px-2">
+    <div key={props.item} className="bg-custom-accent text-sm text-custom-dark rounded-xl border border-custom-dark w-fit h-fit px-2">
       {props.item}
     </div>
   )

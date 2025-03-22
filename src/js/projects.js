@@ -44,7 +44,7 @@ const RenderProjects = () => {
       <div key={item.name} className="flex flex-row">
         <img src={item.img} alt={item.name} className="w-10 h-8"/>
         <div className="flex flex-col">
-          <p className="">{item.name}</p>
+          <p className="bg-custom-accent text-custom-dark text-center font-semibold">{item.name}</p>
           <p>{item.desc}</p>
           <div className="flex flex-wrap gap-3">
             {item.tech.map(ele => (
