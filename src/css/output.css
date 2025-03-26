@@ -490,9 +490,6 @@ body {
 .h-8 {
   height: 2rem;
 }
-.h-96 {
-  height: 24rem;
-}
 .h-dvh {
   height: 100dvh;
 }
@@ -553,9 +550,6 @@ body {
 .justify-center {
   justify-content: center;
 }
-.justify-between {
-  justify-content: space-between;
-}
 .gap-2 {
   gap: 0.5rem;
 }
@@ -608,11 +602,12 @@ body {
 .pl-4 {
   padding-left: 1rem;
 }
-.text-left {
-  text-align: left;
-}
 .text-center {
   text-align: center;
+}
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
 }
 .text-3xl {
   font-size: 1.875rem;

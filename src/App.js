@@ -3,15 +3,17 @@ import './css/styles.css';
 import './css/output.css';
 import Nav from './js/nav.js';
 import { ContactBadges, IconBadges, ToTop } from './js/badges.js';
-import RenderProjects from './js/projects';
+import RenderProjects from './js/projects.js';
 import ProfilePhoto from './assets/photo_PaulaAbigail_Tam.JPG';
-import RenderExperience from './js/experience';
+import RenderExperience from './js/experience.js';
+import RenderEducation from './js/education.js';
+import SectionBanner from './js/sectionBanner.js';
 
 function App() {
   return (
     <>
       <Nav />
-      <main>
+      <main className="gap-4">
         <div id="hero" className="h-dvh scroll-mt-12 flex justify-center">
           <div className="flex flex-row justify-center items-center gap-2 m-auto">
             <div className="center-items">
@@ -25,27 +27,31 @@ function App() {
             </div>
           </div>
         </div>
-        <div id="about" className="h-96 flex flex-col justify-between scroll-mt-12">
-          <div className="flex-1 center-items m-auto">
-            <p className="font-semibold text-xl">About Me!</p>
+        <div id="about" className="flex-1 center-items gap-6 m-auto scroll-mt-12">
+          <SectionBanner item={"About me!"} />
+          <div>
             <p>I graduated in May 2023 with a BS in Computer Science and a Minor in Mathematics.</p>
             <p>I am currently working part-time as a Data Analytics Instructor at COOP Careers.</p>
           </div>
-          <div id="skills" className="flex-1 center-items m-auto">
+          <div id="skills">
+            <SectionBanner item={"Skills"} />
             <IconBadges />
           </div>
         </div>
         <div id="experience" className="flex-1 center-items gap-6 m-auto scroll-mt-12">
+          <SectionBanner item={"Experience"} />
           <RenderExperience />
-        </div> {/*change height to fit-content later on*/}
+        </div>
         <div id="projects" className="flex-1 center-items gap-6 m-auto scroll-mt-12">
+          <SectionBanner item={"Projects"} />
           <RenderProjects />
         </div>
-        <div id="education" className="h-96 scroll-mt-12">
-          <div className="center-items text-left">education</div>
+        <div id="education" className="flex-1 center-items gap-6 m-auto scroll-mt-12">
+          <SectionBanner item={"Education"} />
+          <RenderEducation />
         </div>
         <div id="contact" className="scroll-mt-12 p-4">
-          <p className="font-semibold text-xl">Contact</p>
+          <SectionBanner item={"Contacts"} />
           <ContactBadges />
         </div>
         <ToTop />

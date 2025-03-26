@@ -57,7 +57,7 @@ const ContactIcons = [
 
 export const ContactBadges = () => {
   return (
-    <ul className="pl-4">
+    <ul className="pl-4 flex-row">
       {ContactIcons.map(item => (
         <li key={item.name} className="hover flex flex-row items-center gap-3 p-2">
           {item.icon}
