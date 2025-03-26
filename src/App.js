@@ -5,6 +5,7 @@ import Nav from './js/nav.js';
 import { ContactBadges, IconBadges, ToTop } from './js/badges.js';
 import RenderProjects from './js/projects';
 import ProfilePhoto from './assets/photo_PaulaAbigail_Tam.JPG';
+import RenderExperience from './js/experience';
 
 function App() {
   return (
@@ -34,11 +35,14 @@ function App() {
             <IconBadges />
           </div>
         </div>
-        <div id="experience" className="h-96 scroll-mt-12">
-          <div className="center-items text-left">experience</div>
+        <div id="experience" className="flex-1 center-items gap-6 m-auto scroll-mt-12">
+          <RenderExperience />
         </div> {/*change height to fit-content later on*/}
         <div id="projects" className="flex-1 center-items gap-6 m-auto scroll-mt-12">
           <RenderProjects />
+        </div>
+        <div id="education" className="h-96 scroll-mt-12">
+          <div className="center-items text-left">education</div>
         </div>
         <div id="contact" className="scroll-mt-12 p-4">
           <p className="font-semibold text-xl">Contact</p>
