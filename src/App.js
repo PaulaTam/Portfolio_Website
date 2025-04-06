@@ -22,8 +22,8 @@ function App() {
               <p>I am a Software Engineer with a focus on frontend. Currently based in the San Francisco Bay Area, CA. Nice to meet you!</p>
               <p>I'm passionate about creating creative, engaging, and intuitive web experiences.</p>
             </div>
-            <div className="h-40 w-40 border">
-              <img src={ProfilePhoto} alt='img here' />
+            <div className="h-40 w-40">
+              <img src={ProfilePhoto} alt='img here' className="h-40 w-full rounded-full object-cover object-center" />
             </div>
           </div>
         </div>
