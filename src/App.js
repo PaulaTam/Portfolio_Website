@@ -22,8 +22,9 @@ function App() {
               <p>I am a Software Engineer with a focus on frontend. Currently based in the San Francisco Bay Area, CA. Nice to meet you!</p>
               <p>I'm passionate about creating creative, engaging, and intuitive web experiences.</p>
             </div>
-            <div className="h-40 w-40">
-              <img src={ProfilePhoto} alt='img here' className="h-40 w-full rounded-full object-cover object-center" />
+            <div className="grid place-items-center rounded-full">
+              <div className="size-44 col-start-1 row-start-1 rounded-full bg-gradient-to-r from-custom-accent to-custom-main animate-spin p-0.5 z-0"/>
+              <img src={ProfilePhoto} alt='img here' className="size-40 col-start-1 row-start-1  rounded-full object-cover z-10" />
             </div>
           </div>
         </div>

@@ -497,6 +497,9 @@ body {
   height: -moz-fit-content;
   height: fit-content;
 }
+.h-full {
+  height: 100%;
+}
 .w-10 {
   width: 2.5rem;
 }
@@ -509,6 +512,9 @@ body {
 .w-fit {
   width: -moz-fit-content;
   width: fit-content;
+}
+.w-full {
+  width: 100%;
 }
 .flex-1 {
   flex: 1 1 0%;
@@ -583,6 +589,9 @@ body {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
+.object-cover {
+  object-fit: cover;
+}
 .p-1 {
   padding: 0.25rem;
 }
@@ -594,6 +603,9 @@ body {
 }
 .p-4 {
   padding: 1rem;
+}
+.p-px {
+  padding: 1px;
 }
 .px-2 {
   padding-left: 0.5rem;
@@ -664,3 +676,4 @@ body {
 html {
   scroll-behavior: smooth;
 }
+
