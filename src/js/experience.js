@@ -8,7 +8,7 @@ const experienceLinks = [
     companyWebsite: "https://coopcareers.org/",
     desc: 
     [
-      "Instruct 16 students transitioning into data analytics through a 4 month fellowship program, to ensure a program retention rate of more than 85%.",
+      "Instruct 16 to 20 students transitioning into data analytics through a 4 month fellowship program, to ensure a retention rate of more than 85%.",
       "Collaborate with a team of 3 co-instructors to facilitate a series of career development and data analytics workshops on Excel, Tableau, and SQL.",
       "Oversee and provide input to fellows’ deliverables, culminating in a client-facing data capstone project."
     ],
@@ -49,9 +49,12 @@ const RenderExperience = () => {
     <>
       {experienceLinks.map(item => (
       <div key={item.role} className="flex flex-row">
-        <div className="flex flex-col">
+        <div className="flex flex-col flex-1 gap-2">
           <p className="bg-custom-accent text-custom-dark text-center font-semibold">{item.role}</p>
-          <a href={item.companyWebsite}>{item.company}</a>
+          <div className="flex flex-row gap-2 font-semibold text-lg">
+            <p>Company:</p>
+            <a href={item.companyWebsite} className="hover underline">{item.company}</a>
+          </div>
           <div className="flex flex-wrap gap-3">
             <p>Start date: 
               <TextBadges item={item.start} />

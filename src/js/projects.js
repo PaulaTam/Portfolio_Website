@@ -12,8 +12,8 @@ const projectLinks = [
     tech: [ "React", "JavaScript", "Tailwind CSS", "Git / Github", "Github Pages"]
   },
   {name: "SeaScribe", github: "https://github.com/cherryontech/comet-cruisers-spring2024",
-    project: "https://github.com/cherryontech/comet-cruisers-spring2024",
-    desc: "",
+    project: "https://seascribe.netlify.app/",
+    desc: "A project done during my time in the CherryOnTech cohort of Spring 2024. SeaScribe is a wellness app designed to provide a nurturing space for individuals grappling with burnout from the demands of school or work. Our mission is to prioritize mental well-being by offering a seamless and supportive platform that encourages users to unwind, reflect, and rejuvenate.",
     img: seascribe,
     tech: ["React", "JavaScript", "Tailwind CSS", "React Hooks", "ESLint", "Prettier", "Git / Github", "Netlify", "Jira"]
   },
@@ -43,7 +43,7 @@ const RenderProjects = () => {
     {projectLinks.map(item => (
       <div key={item.name} className="flex flex-row">
         <img src={item.img} alt={item.name} className="w-10 h-8"/>
-        <div className="flex flex-col">
+        <div className="flex flex-col flex-1">
           <p className="bg-custom-accent text-custom-dark text-center font-semibold">{item.name}</p>
           <p>{item.desc}</p>
           <div className="flex flex-wrap gap-3">
@@ -53,7 +53,7 @@ const RenderProjects = () => {
           </div>
           <div className="flex flex-row gap-2">
             <a href={item.github} target="_blank" rel="noopener noreferrer">Github Repo</a>
-            {item.project.length <= 0 ?
+            {item.project.length > 0 ?
               <a href={item.project} target="_blank" rel="noopener noreferrer">Project Link</a>
               : <p>No project link available.</p>
             }

@@ -3,6 +3,12 @@ import { TextBadges } from './badges.js';
 
 const educationLinks = [
   {
+    school: "COOP Careers - Fellowship Program",
+    degree: "Google Data Analytics Certificate",
+    start: "August 2024",
+    end: "December 2024"
+  },
+  {
     school: "San Francisco State University",
     degree: "Bachelor of Science in Computer Science, Minor in Mathematics",
     start: "August 2021",
