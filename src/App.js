@@ -13,18 +13,18 @@ function App() {
   return (
     <>
       <Nav />
-      <main className="gap-4">
+      <main className="flex flex-col gap-y-5">
         <div id="hero" className="h-dvh scroll-mt-12 flex justify-center">
           <div className="flex flex-row justify-center items-center gap-2 m-auto">
             <div className="center-items">
               <p className="font-bold text-3xl">Paula Abigail T. Tam</p>
               <p className="font-semibold text-xl">Frontend Engineer | Software Engineer | Fullstack Engineer</p>
-              <p>I am a Software Engineer with a focus on frontend. Currently based in the San Francisco Bay Area, CA. Nice to meet you!</p>
+              <p>I am a Software Engineer with a focus on frontend development! Currently based in the San Francisco Bay Area, CA. Nice to meet you!</p>
               <p>I'm passionate about creating creative, engaging, and intuitive web experiences.</p>
             </div>
             <div className="grid place-items-center rounded-full">
               <div className="size-44 col-start-1 row-start-1 rounded-full bg-gradient-to-r from-custom-accent to-custom-main animate-spin p-0.5 z-0"/>
-              <img src={ProfilePhoto} alt='img here' className="size-40 col-start-1 row-start-1  rounded-full object-cover z-10" />
+              <img src={ProfilePhoto} alt='profile img here' className="size-40 col-start-1 row-start-1  rounded-full object-cover z-10" />
             </div>
           </div>
         </div>
@@ -33,6 +33,7 @@ function App() {
           <div>
             <p>I graduated in May 2023 with a BS in Computer Science and a Minor in Mathematics.</p>
             <p>I am currently working part-time as a Data Analytics Instructor at COOP Careers.</p>
+            <p>I eventually want to get into the EdTech industry, as I am both passionate about education and the utility of technology!</p> 
           </div>
           <div id="skills">
             <SectionBanner item={"Skills"} />
