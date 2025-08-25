@@ -23,20 +23,23 @@ export const TextBadges = (props) => {
   )
 };
 
-const SkillIcons = [
+const HardSkillIcons = [
   { name: "React", icon: <FaReact className="icon-center text-cyan-300" /> },
   { name: "JavaScript", icon: <IoLogoJavascript className="icon-center text-yellow-400" /> },
   { name: "HTML5", icon: <FaHtml5 className="icon-center text-orange-600" /> },
   { name: "CSS3", icon: <FaCss3Alt className="icon-center text-blue-500" /> },
   { name: "Python", icon: <img src={PythonIcon} alt="Python icon" className="icon-center" /> },
   { name: "Tailwind CSS", icon: <RiTailwindCssFill className="icon-center text-sky-400" /> },
-  { name: "Figma", icon: <img src={FigmaIcon} alt="Figma icon" className="icon-center" /> }
+  { name: "Figma", icon: <img src={FigmaIcon} alt="Figma icon" className="icon-center" /> },
+  /*{ name: "Excel", icon: },
+  { name: "Tableau", icon: },
+  { name: "SQL", icon: }*/
 ];
 
 export const IconBadges = () => {
   return (
     <div className="flex flex-wrap gap-3">
-      {SkillIcons.map(item => (
+      {HardSkillIcons.map(item => (
         <div key={item.name} className="hover text-center p-1">
           {item.icon}
           <p>{item.name}</p>
