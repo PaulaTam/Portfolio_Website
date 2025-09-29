@@ -8,11 +8,38 @@ import ProfilePhoto from './assets/photo_PaulaAbigail_Tam.JPG';
 import RenderExperience from './js/experience.js';
 import RenderEducation from './js/education.js';
 import SectionBanner from './js/sectionBanner.js';
+import React, { useState, useEffect, useRef } from 'react';
 
 function App() {
+
+  const changeRef = useRef(null)
+  const [isVisible, setIsVisible] = useState(false);
+
+  const callbackFunc = (entries) => {
+    console.log(entries)
+    const [ entry ] = entries;
+    setIsVisible(entry.isIntersecting);
+  };
+
+  const options = {
+    root: null,
+    rootMargin: "0px",
+    threshold: 1.0
+  };
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(callbackFunc, options);
+    if (changeRef.current) observer.observe(changeRef.current)
+
+    return () => {
+      if (changeRef.current) observer.unobserve(changeRef.current)
+    }
+  }, [changeRef, options]);
+
+
   return (
     <>
-      <Nav />
+      <Nav change={isVisible}/>
       <main className="flex flex-col gap-y-5">
         <div id="hero" className="h-dvh scroll-mt-12 flex justify-center">
           <div className="flex flex-row justify-center items-center gap-2 m-auto">
@@ -28,11 +55,11 @@ function App() {
             </div>
           </div>
         </div>
-        <div id="about" className="flex-1 center-items gap-6 m-auto scroll-mt-12">
+        <div id="about" ref={changeRef} className="flex-1 center-items gap-6 m-auto scroll-mt-12">
           <SectionBanner item={"About me!"} />
           <div>
             <p>I graduated in May 2023 with a BS in Computer Science and a Minor in Mathematics.</p>
-            <p>I am currently working part-time as a Data Analytics Instructor at COOP Careers.</p>
+            <p>I am currently working part-time as a Data Analytics Instructor at COOP Careers, where I teach peers and career pivoters about the basics of data analytics.</p>
             <p>I eventually want to get into the EdTech industry, as I am both passionate about education and the utility of technology!</p> 
           </div>
           <div id="skills">
@@ -53,7 +80,7 @@ function App() {
           <RenderEducation />
         </div>
         <div id="contact" className="scroll-mt-12 p-4">
-          <SectionBanner item={"Contacts"} />
+          <SectionBanner item={"Contact"} />
           <ContactBadges />
         </div>
         <ToTop />

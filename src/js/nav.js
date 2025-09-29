@@ -1,8 +1,10 @@
 import React from 'react';
 
-const Nav = () => {
+const Nav = ({ change }) => {
+
   return (
     <nav className="text-custom-light flex flex-row gap-4 justify-end sticky top-0 p-3">
+      {change ? "yes" : "no"}
       <a href="#about">About</a>
       <a href="#experience">Experience</a>
       <a href="#projects">Projects</a>
