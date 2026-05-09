@@ -1,0 +1,33 @@
+/* src/styles.css */
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+html {
+  scroll-behavior: smooth;
+}
+
+@layer base {
+  body {
+    @apply bg-custom-main text-custom-light;
+  }
+}
+
+@layer components {
+  .hover {
+    @apply hover:-translate-y-1 duration-75;
+  }
+  
+  .center-items {
+    @apply flex flex-col justify-center w-4/6;
+  }
+
+  .icon-center {
+    @apply h-16 w-16 m-auto;
+  }
+
+  .contact-icon {
+    @apply h-8 w-8;
+  }
+}
+
